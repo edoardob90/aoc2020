@@ -6,7 +6,7 @@ This year I will team with [Giulio I.](https://github.com/giulioi) to get as clo
 
 ## Progress
 
-- [ ] Day 1
+- [x] Day 1
 - [ ] Day 2
 - [ ] Day 3
 - [ ] Day 4
