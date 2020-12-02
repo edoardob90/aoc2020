@@ -10,7 +10,7 @@ with open("input.txt") as f:
         idxs = [int(idx) for idx in ll[0].split("-")]
         letter = ll[1][0]
         pw = ll[2]
-        if idxs[0] < pw.count(letter) < idxs[1]:
+        if idxs[0] <= pw.count(letter) <= idxs[1]:
             goodPW_part1 += 1
         else:
             badPW_part1 += 1
