@@ -62,6 +62,13 @@ In this example, traversing the map using this slope would cause you to encounte
 
 Starting at the top-left corner of your map and following a slope of right 3 and down 1, how many trees would you encounter?
 
+<details>
+  <summary>Show the answer</summary>
+  
+  #### Answer
+  You will cross **336 trees**
+</details>
+
 
 ### Part 2
 
@@ -78,3 +85,10 @@ Determine the number of trees you would encounter if, for each of the following 
 In the above example, these slopes would find 2, 7, 3, 4, and 2 tree(s) respectively; multiplied together, these produce the answer 336.
 
 What do you get if you multiply together the number of trees encountered on each of the listed slopes?
+
+<details>
+  <summary>Show the answer</summary>
+  
+  #### Answer
+  Multiplying the number of trees encoutered in the 5 slopes gives **9 354 744 432**
+</details>
