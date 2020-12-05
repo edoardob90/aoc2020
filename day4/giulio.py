@@ -19,7 +19,7 @@ def check_hgt(field):
             else:
                 return False
         if field[-2:] == "in":
-            if 59 < int(field[:-2]) < 76:
+            if 59 <= int(field[:-2]) <= 76:
                 return True
             else:
                 return False
