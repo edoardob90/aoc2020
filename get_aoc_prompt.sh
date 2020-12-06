@@ -1,6 +1,6 @@
 #!/bin/bash
 # must supply the day index
-[[ "$#" < 1 ]] && echo -e "Day number is missing!\nUsage $(basename $0) <day number> (single digit)" >&2 && exit 1
+[[ "$#" < 1 ]] && echo -e "Day number is missing!\nUSAGE: $(basename $0) <day number> [<pandoc path>]" >&2 && exit 1
 
 # system must have Pandoc
 if ! type pandoc 2>/dev/null 1>/dev/null; then
@@ -14,7 +14,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # just make sure the destination directory exists
 DEST=${DIR}/day${1}; mkdir -p ${DEST}
 
-/usr/local/bin/pandoc -f html -t gfm "https://adventofcode.com/2020/day/${1}" | \
+# get html with pandoc and convert it to md
+${2:-/usr/local/bin/pandoc} -f html -t gfm --wrap=preserve "https://adventofcode.com/2020/day/${1}" | \
 awk '{
     if ($0 ~ /<div role="main">/) {
         getline
