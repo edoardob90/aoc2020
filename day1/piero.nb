@@ -1,0 +1,108 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3267,        100]
+NotebookOptionsPosition[      2189,         68]
+NotebookOutlinePosition[      2994,         94]
+CellTagsIndexPosition[      2916,         89]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Day 1", "Subsubsection",
+ CellChangeTimes->{{3.81636433800452*^9, 3.816364339600172*^9}, {
+  3.8163715989460707`*^9, 3.816371599004032*^9}, {3.816372636775671*^9, 
+  3.816372637633458*^9}},ExpressionUUID->"dd587ccd-0386-4091-9d5b-\
+ec11530786ec"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Times", "@@", 
+  RowBox[{"ggg", "[", 
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Position", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Total", "[", "#", "]"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{"ggg", "=", 
+           RowBox[{"Subsets", "[", 
+            RowBox[{
+             RowBox[{"Flatten", "[", 
+              RowBox[{"Import", "[", 
+               RowBox[{"\"\<input.txt\>\"", ",", "\"\<Table\>\""}], "]"}], 
+              "]"}], ",", 
+             RowBox[{"{", "2", "}"}]}], "]"}]}], ")"}]}], ",", "2020"}], 
+       "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.816372827632661*^9, 3.816372845926589*^9}, {
+  3.8163729207385273`*^9, 3.816373138914184*^9}, {3.816373265725726*^9, 
+  3.816373307169888*^9}},
+ CellTags->
+  "Subsets_templates",ExpressionUUID->"1ee5633b-b4fa-446c-961d-a1510923dc45"],
+
+Cell[BoxData["121396"], "Output",
+ CellChangeTimes->{{3.816373052922262*^9, 3.816373083683414*^9}, {
+   3.816373115632002*^9, 3.81637312483112*^9}, 3.816373231281695*^9, 
+   3.8163732676088037`*^9},
+ CellTags->"Subsets_templates",
+ CellLabel->"Out[5]=",ExpressionUUID->"02cc5167-907b-418f-a660-9d79b0859a95"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440., 758.25},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"fb95e2ca-9490-4014-8076-2f4becc8af31"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Subsets_templates"->{
+  Cell[857, 30, 993, 27, 29, "Input",ExpressionUUID->"1ee5633b-b4fa-446c-961d-a1510923dc45",
+   CellTags->"Subsets_templates"],
+  Cell[1853, 59, 308, 5, 33, "Output",ExpressionUUID->"02cc5167-907b-418f-a660-9d79b0859a95",
+   CellTags->"Subsets_templates"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Subsets_templates", 2635, 81}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 252, 4, 45, "Subsubsection",ExpressionUUID->"dd587ccd-0386-4091-9d5b-ec11530786ec"],
+Cell[CellGroupData[{
+Cell[857, 30, 993, 27, 29, "Input",ExpressionUUID->"1ee5633b-b4fa-446c-961d-a1510923dc45",
+ CellTags->"Subsets_templates"],
+Cell[1853, 59, 308, 5, 33, "Output",ExpressionUUID->"02cc5167-907b-418f-a660-9d79b0859a95",
+ CellTags->"Subsets_templates"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
