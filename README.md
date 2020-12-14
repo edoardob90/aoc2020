@@ -17,8 +17,7 @@ chmod +x edo.wls
 
 ## Progress
 
-|■■■■■■■■■■■■■■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□□□□|
-
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□|
 
 *Marked only if the puzzle has been solved with at least one language*
 
