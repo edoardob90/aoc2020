@@ -6,6 +6,7 @@ int = Interpreter["Integer"];
 {ts, busIDs} = MapAt[
    StringCases[t:DigitCharacter..~~","|EndOfLine:>int@t], StringSplit@$ScriptInputString, 2]
 
+
 (* ::Section:: *)
 (*Part 1*)
 
@@ -15,6 +16,7 @@ int = Interpreter["Integer"];
 divisorsAround[n_,\[Delta]_,div_]:=
 <|div-> Select[Range[n,n+\[Delta]],Divisible[#,div]&]-n|>
 
+
 (* ::Text:: *)
 (*As delta we use the largest bus ID which is the largest period of time after which that bus will start a new ride*)
 
@@ -23,6 +25,7 @@ divs = divisorsAround[int@ts, Max@busIDs, #]&/@ busIDs//Apply@Join//Map@Min//Sor
 Print[
  StringTemplate["--- Part 1 ---\nID of the earliest bus multiplied by the number of waiting minutes: ``"][First@KeyValueMap[#1*#2&, divs]]
  ]
+
 
 (* ::Section:: *)
 (*Part 2*)
@@ -46,3 +49,8 @@ ts = FindInstance[KeyValueMap[Mod[t+#2,#1]==0&, busOffsets], t, Integers]
 Print[
 StringTemplate["\n--- Part 2 ---\nEarliest timestamp: ``"][t/.First@ts]
 ]
+
+(* ::Text:: *)
+(*Or, a more compact and somewhat elegant solution is*)
+
+(*ChineseRemainder@@{-Values@busOffsets, Keys@busOffsets}*)
