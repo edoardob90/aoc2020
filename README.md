@@ -2,9 +2,7 @@
 
 The Advent of Code, 2020 edition. The coding challenge from December 1st until Christmas created by [Eric Wastl](http://was.tl/). The first puzzles will unlock as usual at Midnight (UTC-5) on December the 1st.
 
-~~This year I will team with [Giulio I.](https://github.com/giulioi) to get as close as possible to Christmas Day's puzzle. [Piero G.](https://github.com/pgasparo) decided to join starting from Day 7.~~
-
-Both of my teammates abandoned me 😢. I'm alone with the Wolfram Language till Christmas. I'll do my best.
+This year I will team with [Giulio I.](https://github.com/giulioi) to get as close as possible to Christmas Day's puzzle. [Piero G.](https://github.com/pgasparo) decided to join starting from Day 7.
 
 ## Languages used
 
