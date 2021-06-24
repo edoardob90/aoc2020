@@ -2,24 +2,49 @@
 import sys
 import argparse
 
+def addAnyAnswer(currentAnswer):
+    squeezeAnswer = []
+    for element in currentAnswer:
+        squeezeAnswer += element
+    return len(set(squeezeAnswer))
+
+def addAllAnswer(currentAnswer):
+    allAnswers = 0
+    numberOfElements = len(currentAnswer)
+    counterAnswers = {}
+    for letter in currentAnswer[0]:
+        counterAnswers[letter] = 0
+        for element in currentAnswer:
+            if letter in element:
+                counterAnswers[letter] += 1
+
+        if counterAnswers[letter] == numberOfElements:
+            allAnswers += 1
+
+    return allAnswers
+
 def main(filename, test):
-    all_answers = []
-    current_answer = []
-    counter = 0
-    
+    currentAnswer = []
+    anyCounter = 0
+    allCounter = 0
+    check = []    
     with open(filename) as f:
         if test:
             testResults = f.readline()
             print(testResults)
         for line in f:
             if line == "\n":
-                all_answers.append(current_answer)
-                counter += len(set(current_answer))
-                current_answer = []
+                anyCounter += addAnyAnswer(currentAnswer)
+                allCounter += addAllAnswer(currentAnswer)
+                currentAnswer = []
+                check = []
             else:
-                current_answer += line.rstrip()
-    counter += len(set(current_answer))
-    print("The sum answers with at least one yes is", counter)
+#                currentAnswer += line.rstrip()
+                currentAnswer.append(line.rstrip())
+    anyCounter += addAnyAnswer(currentAnswer)
+    allCounter += addAllAnswer(currentAnswer)
+    print("The number of answers with at least one yes is", anyCounter)
+    print("The number of answers with at all being yes is", allCounter)
                 
 
 
