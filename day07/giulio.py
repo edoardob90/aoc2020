@@ -2,6 +2,24 @@
 import sys
 import argparse
 
+def count_ex_1(bagDict, bagToCheck, checkedBags=[]):
+    
+    totalNumber = 0
+    for key,value in bagDict.items():
+        if value[0] == "":
+            pass
+        else:
+            for bagInside in value:
+                tmpBag = bagInside.split(" ")
+                compareBag = tmpBag[1] + " " + tmpBag[2]
+                if compareBag == bagToCheck:
+                    if key not in checkedBags:
+                        checkedBags.append(key)
+                        tmpNumber, checkedBags= count_ex_1(bagDict, key, checkedBags)
+                        totalNumber += tmpNumber
+                        totalNumber += 1
+    return totalNumber, checkedBags
+
 def main(filename, test):
     bagDict = {}
     with open(filename) as f:
@@ -9,7 +27,7 @@ def main(filename, test):
             testResults = f.readline()
             print(testResults)
         for line in f:
-            aa = line.rstrip(".\n").split("bags contain ")
+            aa = line.rstrip(".\n").split(" bags contain ")
             if aa[1] == "no other bags":
                 bagDict[aa[0]] = [""]
             else:
@@ -17,6 +35,10 @@ def main(filename, test):
                 bagDict[aa[0]] = []
                 for bag in inside:
                     bagDict[aa[0]].append(bag)
+    bagToCheck = "shiny gold"
+    ex1 = count_ex_1(bagDict, bagToCheck)
+
+    print("Our bag can be in", ex1[0], "other bags")
 
 
 
